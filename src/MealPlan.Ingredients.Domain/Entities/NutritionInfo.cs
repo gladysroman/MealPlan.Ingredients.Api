@@ -1,0 +1,9 @@
+namespace MealPlan.Ingredients.Domain.Entities;
+
+public class NutritionInfo
+{
+    public int Calories { get; set; }
+    public decimal CarbsG { get; set; }
+    public decimal ProteinG { get; set; }
+    public decimal FatG { get; set; }
+}

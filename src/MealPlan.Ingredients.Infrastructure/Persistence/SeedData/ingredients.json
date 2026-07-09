@@ -1,0 +1,282 @@
+[
+  {
+    "id": "ing_001",
+    "name": "Chicken",
+    "category": "protein",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 165,
+      "carbs_g": 0,
+      "protein_g": 31,
+      "fat_g": 3.6
+    },
+    "created_date": "2026-01-01",
+    "updated_date": "2026-06-01"
+  },
+  {
+    "id": "ing_002",
+    "name": "Salmon",
+    "category": "protein",
+    "allergens": ["fish"],
+    "nutrition_per_100g": {
+      "calories": 208,
+      "carbs_g": 0,
+      "protein_g": 20,
+      "fat_g": 13
+    },
+    "created_date": "2026-01-01",
+    "updated_date": "2026-01-01"
+  },
+  {
+    "id": "ing_003",
+    "name": "Large Egg",
+    "category": "protein",
+    "allergens": ["egg"],
+    "nutrition_per_100g": {
+      "calories": 143,
+      "carbs_g": 0.7,
+      "protein_g": 12.6,
+      "fat_g": 9.5
+    },
+    "created_date": "2026-01-02",
+    "updated_date": "2026-01-02"
+  },
+  {
+    "id": "ing_004",
+    "name": "Tofu",
+    "category": "protein",
+    "allergens": ["soy"],
+    "nutrition_per_100g": {
+      "calories": 76,
+      "carbs_g": 1.9,
+      "protein_g": 8,
+      "fat_g": 4.8
+    },
+    "created_date": "2026-01-02",
+    "updated_date": "2026-03-15"
+  },
+  {
+    "id": "ing_005",
+    "name": "Whole Milk",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "nutrition_per_100g": {
+      "calories": 61,
+      "carbs_g": 4.8,
+      "protein_g": 3.2,
+      "fat_g": 3.3
+    },
+    "created_date": "2026-01-03",
+    "updated_date": "2026-01-03"
+  },
+  {
+    "id": "ing_006",
+    "name": "Cheddar Cheese",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "nutrition_per_100g": {
+      "calories": 403,
+      "carbs_g": 1.3,
+      "protein_g": 25,
+      "fat_g": 33
+    },
+    "created_date": "2026-01-03",
+    "updated_date": "2026-01-03"
+  },
+  {
+    "id": "ing_007",
+    "name": "Greek Yogurt",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "nutrition_per_100g": {
+      "calories": 59,
+      "carbs_g": 3.6,
+      "protein_g": 10,
+      "fat_g": 0.4
+    },
+    "created_date": "2026-01-04",
+    "updated_date": "2026-05-20"
+  },
+  {
+    "id": "ing_008",
+    "name": "Broccoli",
+    "category": "vegetable",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 34,
+      "carbs_g": 6.6,
+      "protein_g": 2.8,
+      "fat_g": 0.4
+    },
+    "created_date": "2026-01-04",
+    "updated_date": "2026-01-04"
+  },
+  {
+    "id": "ing_009",
+    "name": "Spinach",
+    "category": "vegetable",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 23,
+      "carbs_g": 3.6,
+      "protein_g": 2.9,
+      "fat_g": 0.4
+    },
+    "created_date": "2026-01-05",
+    "updated_date": "2026-01-05"
+  },
+  {
+    "id": "ing_010",
+    "name": "Carrot",
+    "category": "vegetable",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 41,
+      "carbs_g": 9.6,
+      "protein_g": 0.9,
+      "fat_g": 0.2
+    },
+    "created_date": "2026-01-05",
+    "updated_date": "2026-01-05"
+  },
+  {
+    "id": "ing_011",
+    "name": "Banana",
+    "category": "fruit",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 89,
+      "carbs_g": 22.8,
+      "protein_g": 1.1,
+      "fat_g": 0.3
+    },
+    "created_date": "2026-01-06",
+    "updated_date": "2026-01-06"
+  },
+  {
+    "id": "ing_012",
+    "name": "Blueberries",
+    "category": "fruit",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 57,
+      "carbs_g": 14.5,
+      "protein_g": 0.7,
+      "fat_g": 0.3
+    },
+    "created_date": "2026-01-06",
+    "updated_date": "2026-04-10"
+  },
+  {
+    "id": "ing_013",
+    "name": "Avocado",
+    "category": "fruit",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 160,
+      "carbs_g": 8.5,
+      "protein_g": 2,
+      "fat_g": 14.7
+    },
+    "created_date": "2026-01-07",
+    "updated_date": "2026-01-07"
+  },
+  {
+    "id": "ing_014",
+    "name": "Brown Rice",
+    "category": "grain",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 111,
+      "carbs_g": 23,
+      "protein_g": 2.6,
+      "fat_g": 0.9
+    },
+    "created_date": "2026-01-07",
+    "updated_date": "2026-01-07"
+  },
+  {
+    "id": "ing_015",
+    "name": "Rolled Oats",
+    "category": "grain",
+    "allergens": ["gluten"],
+    "nutrition_per_100g": {
+      "calories": 389,
+      "carbs_g": 66.3,
+      "protein_g": 16.9,
+      "fat_g": 6.9
+    },
+    "created_date": "2026-01-08",
+    "updated_date": "2026-01-08"
+  },
+  {
+    "id": "ing_016",
+    "name": "Whole Wheat Bread",
+    "category": "grain",
+    "allergens": ["gluten", "wheat"],
+    "nutrition_per_100g": {
+      "calories": 247,
+      "carbs_g": 41.3,
+      "protein_g": 13,
+      "fat_g": 3.4
+    },
+    "created_date": "2026-01-08",
+    "updated_date": "2026-02-18"
+  },
+  {
+    "id": "ing_017",
+    "name": "Almonds",
+    "category": "nuts_and_seeds",
+    "allergens": ["tree_nuts"],
+    "nutrition_per_100g": {
+      "calories": 579,
+      "carbs_g": 21.6,
+      "protein_g": 21.2,
+      "fat_g": 49.9
+    },
+    "created_date": "2026-01-09",
+    "updated_date": "2026-01-09"
+  },
+  {
+    "id": "ing_018",
+    "name": "Peanut Butter",
+    "category": "nuts_and_seeds",
+    "allergens": ["peanuts"],
+    "nutrition_per_100g": {
+      "calories": 588,
+      "carbs_g": 20,
+      "protein_g": 25,
+      "fat_g": 50
+    },
+    "created_date": "2026-01-09",
+    "updated_date": "2026-01-09"
+  },
+  {
+    "id": "ing_019",
+    "name": "Olive Oil",
+    "category": "fat_and_oil",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 884,
+      "carbs_g": 0,
+      "protein_g": 0,
+      "fat_g": 100
+    },
+    "created_date": "2026-01-10",
+    "updated_date": "2026-01-10"
+  },
+  {
+    "id": "ing_020",
+    "name": "Garlic",
+    "category": "spice",
+    "allergens": [],
+    "nutrition_per_100g": {
+      "calories": 149,
+      "carbs_g": 33.1,
+      "protein_g": 6.4,
+      "fat_g": 0.5
+    },
+    "created_date": "2026-01-10",
+    "updated_date": "2026-01-10"
+  }
+]

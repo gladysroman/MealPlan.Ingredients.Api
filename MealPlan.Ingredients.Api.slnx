@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MealPlan.Ingredients.Api/MealPlan.Ingredients.Api.csproj" />
+    <Project Path="src/MealPlan.Ingredients.Application/MealPlan.Ingredients.Application.csproj" />
+    <Project Path="src/MealPlan.Ingredients.Domain/MealPlan.Ingredients.Domain.csproj" />
+    <Project Path="src/MealPlan.Ingredients.Infrastructure/MealPlan.Ingredients.Infrastructure.csproj" />
+  </Folder>
+</Solution>

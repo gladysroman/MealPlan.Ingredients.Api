@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/MealPlan.Ingredients.Api/bin/Debug/net10.0/MealPlan.Ingredients.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/MealPlan.Ingredients.Api",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
+}
