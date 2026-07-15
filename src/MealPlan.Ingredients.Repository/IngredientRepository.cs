@@ -1,8 +1,9 @@
 using MealPlan.Ingredients.Application.Ingredients;
 using MealPlan.Ingredients.Domain.Entities;
+using MealPlan.Ingredients.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace MealPlan.Ingredients.Infrastructure.Persistence;
+namespace MealPlan.Ingredients.Repository;
 
 public class IngredientRepository(IngredientsDbContext dbContext) : IIngredientRepository
 {

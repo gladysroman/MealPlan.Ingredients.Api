@@ -1,17 +1,21 @@
 using MealPlan.Ingredients.Application.Ingredients;
 using MealPlan.Ingredients.Domain.Entities;
 using MealPlan.Ingredients.Infrastructure;
+using MealPlan.Ingredients.Repository;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure();
+builder.Services.AddRepositories();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 await app.Services.SeedInfrastructureDataAsync();

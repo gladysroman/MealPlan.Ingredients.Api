@@ -1,4 +1,3 @@
-using MealPlan.Ingredients.Application.Ingredients;
 using MealPlan.Ingredients.Infrastructure.Persistence;
 using MealPlan.Ingredients.Infrastructure.Persistence.SeedData;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +11,6 @@ public static class DependencyInjection
     {
         services.AddDbContext<IngredientsDbContext>(options =>
             options.UseInMemoryDatabase("MealPlanIngredients"));
-
-        services.AddScoped<IIngredientRepository, IngredientRepository>();
 
         return services;
     }
