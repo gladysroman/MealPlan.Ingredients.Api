@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure();
 builder.Services.AddRepositories();
+builder.Services.AddScoped<IngredientsService>();
 
 var app = builder.Build();
 
@@ -16,25 +17,26 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference();
+    app.MapGet("/", () => Results.Redirect("/scalar/v1"));
 }
 
 await app.Services.SeedInfrastructureDataAsync();
 
 var ingredients = app.MapGroup("/ingredients");
 
-ingredients.MapGet("/", async (IIngredientRepository repository, CancellationToken cancellationToken) =>
+ingredients.MapGet("/", async (IngredientsService service, CancellationToken cancellationToken) =>
 {
-    var results = await repository.GetAllAsync(cancellationToken);
+    var results = await service.GetIngredientsAsync(cancellationToken);
     return results.Select(ToDto);
 });
 
-ingredients.MapGet("/{id}", async (string id, IIngredientRepository repository, CancellationToken cancellationToken) =>
+ingredients.MapGet("/{id}", async (string id, IngredientsService service, CancellationToken cancellationToken) =>
 {
-    var ingredient = await repository.GetByIdAsync(id, cancellationToken);
+    var ingredient = await service.GetIngredientByIdAsync(id, cancellationToken);
     return ingredient is null ? Results.NotFound() : Results.Ok(ToDto(ingredient));
 });
 
-ingredients.MapPost("/", async (CreateIngredientRequest request, IIngredientRepository repository, CancellationToken cancellationToken) =>
+ingredients.MapPost("/", async (CreateIngredientRequest request, IngredientsService service, CancellationToken cancellationToken) =>
 {
     var today = DateOnly.FromDateTime(DateTime.UtcNow);
     var ingredient = new Ingredient
@@ -54,7 +56,7 @@ ingredients.MapPost("/", async (CreateIngredientRequest request, IIngredientRepo
         UpdatedDate = today
     };
 
-    await repository.AddAsync(ingredient, cancellationToken);
+    await service.AddIngredientAsync(ingredient, cancellationToken);
 
     return Results.Created($"/ingredients/{ingredient.Id}", ToDto(ingredient));
 });
