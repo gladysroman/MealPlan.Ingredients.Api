@@ -32,14 +32,18 @@ public static class IngredientsEndpoints
         {
             var ingredient = await service.UpdateIngredientAsync(id, request, cancellationToken);
 
-            return ingredient is null ? Results.NoContent() : Results.Ok(ToDto(ingredient));
+            return ingredient is null
+                ? Results.NotFound($"Ingredient '{id}' was not found.")
+                : Results.Ok(ToDto(ingredient));
         });
 
         ingredients.MapDelete("/{id}", async (string id, IngredientsService service, CancellationToken cancellationToken) =>
         {
-            await service.DeleteIngredientAsync(id, cancellationToken);
+            var deleted = await service.DeleteIngredientAsync(id, cancellationToken);
 
-            return Results.NoContent();
+            return deleted
+                ? Results.NoContent()
+                : Results.NotFound($"Ingredient '{id}' was not found.");
         });
     }
 

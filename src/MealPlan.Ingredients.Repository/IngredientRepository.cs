@@ -27,15 +27,16 @@ public class IngredientRepository(IngredientsDbContext dbContext) : IIngredientR
         return ingredient;
     }
 
-    public async Task DeleteAsync(string id, CancellationToken cancellationToken)
+    public async Task<bool> DeleteAsync(string id, CancellationToken cancellationToken)
     {
         var ingredient = await dbContext.Ingredients.FirstOrDefaultAsync(i => i.Id == id, cancellationToken);
         if (ingredient is null)
         {
-            return;
+            return false;
         }
 
         dbContext.Ingredients.Remove(ingredient);
         await dbContext.SaveChangesAsync(cancellationToken);
+        return true;
     }
 }

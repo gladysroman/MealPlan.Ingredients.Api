@@ -54,6 +54,6 @@ public class IngredientsService(IIngredientRepository repository)
         return await repository.UpdateAsync(existing, cancellationToken);
     }
 
-    public Task DeleteIngredientAsync(string id, CancellationToken cancellationToken) =>
+    public Task<bool> DeleteIngredientAsync(string id, CancellationToken cancellationToken) =>
         repository.DeleteAsync(id, cancellationToken);
 }
