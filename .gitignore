@@ -480,3 +480,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Local docs (not tracked)
+docs/
+CHEATSHEET.md
+SETUP.md

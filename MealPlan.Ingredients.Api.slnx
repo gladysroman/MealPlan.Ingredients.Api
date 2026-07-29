@@ -4,5 +4,6 @@
     <Project Path="src/MealPlan.Ingredients.Application/MealPlan.Ingredients.Application.csproj" />
     <Project Path="src/MealPlan.Ingredients.Domain/MealPlan.Ingredients.Domain.csproj" />
     <Project Path="src/MealPlan.Ingredients.Infrastructure/MealPlan.Ingredients.Infrastructure.csproj" />
+    <Project Path="src/MealPlan.Ingredients.Repository/MealPlan.Ingredients.Repository.csproj" />
   </Folder>
 </Solution>

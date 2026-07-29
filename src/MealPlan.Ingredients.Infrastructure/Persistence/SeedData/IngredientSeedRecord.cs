@@ -4,8 +4,8 @@ namespace MealPlan.Ingredients.Infrastructure.Persistence.SeedData;
 
 internal sealed class IngredientSeedRecord
 {
-    [JsonPropertyName("id")]
-    public string Id { get; init; } = string.Empty;
+    [JsonPropertyName("ingredient_id")]
+    public string IngredientId { get; init; } = string.Empty;
 
     [JsonPropertyName("name")]
     public string Name { get; init; } = string.Empty;
@@ -20,10 +20,10 @@ internal sealed class IngredientSeedRecord
     public NutritionSeedRecord NutritionPer100G { get; init; } = new();
 
     [JsonPropertyName("created_date")]
-    public DateOnly CreatedDate { get; init; }
+    public DateTime CreatedDate { get; init; }
 
     [JsonPropertyName("updated_date")]
-    public DateOnly UpdatedDate { get; init; }
+    public DateTime UpdatedDate { get; init; }
 }
 
 internal sealed class NutritionSeedRecord
