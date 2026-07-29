@@ -22,7 +22,7 @@ internal static class IngredientSeeder
 
         var ingredients = records.Select(record => new Ingredient
         {
-            Id = record.Id,
+            IngredientId = record.IngredientId,
             Name = record.Name,
             Category = record.Category,
             Allergens = record.Allergens,

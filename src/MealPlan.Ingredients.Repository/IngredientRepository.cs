@@ -11,7 +11,7 @@ public class IngredientRepository(IngredientsDbContext dbContext) : IIngredientR
         dbContext.Ingredients.AsNoTracking().ToListAsync(cancellationToken);
 
     public Task<Ingredient?> GetByIdAsync(string id, CancellationToken cancellationToken) =>
-        dbContext.Ingredients.AsNoTracking().FirstOrDefaultAsync(i => i.Id == id, cancellationToken);
+        dbContext.Ingredients.AsNoTracking().FirstOrDefaultAsync(i => i.IngredientId == id, cancellationToken);
 
     public async Task<Ingredient> AddAsync(Ingredient ingredient, CancellationToken cancellationToken)
     {
@@ -29,7 +29,7 @@ public class IngredientRepository(IngredientsDbContext dbContext) : IIngredientR
 
     public async Task<bool> DeleteAsync(string id, CancellationToken cancellationToken)
     {
-        var ingredient = await dbContext.Ingredients.FirstOrDefaultAsync(i => i.Id == id, cancellationToken);
+        var ingredient = await dbContext.Ingredients.FirstOrDefaultAsync(i => i.IngredientId == id, cancellationToken);
         if (ingredient is null)
         {
             return false;

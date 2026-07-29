@@ -14,7 +14,7 @@ public class IngredientsService(IIngredientRepository repository)
         var date = DateTime.UtcNow;
         var ingredient = new Ingredient
         {
-            Id = $"ing_{Guid.NewGuid():N}",
+            IngredientId = $"ing_{Guid.NewGuid():N}",
             Name = request.Name,
             Category = request.Category,
             Allergens = request.Allergens,

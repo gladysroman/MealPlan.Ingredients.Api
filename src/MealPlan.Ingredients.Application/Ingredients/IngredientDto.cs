@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 namespace MealPlan.Ingredients.Application.Ingredients;
 
 public record IngredientDto(
-    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("ingredient_id")] string IngredientId,
     [property: JsonPropertyName("name")] string Name,
     [property: JsonPropertyName("category")] string Category,
     [property: JsonPropertyName("allergens")] IReadOnlyList<string> Allergens,

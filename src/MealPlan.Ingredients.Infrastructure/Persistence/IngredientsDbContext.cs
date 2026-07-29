@@ -11,7 +11,7 @@ public class IngredientsDbContext(DbContextOptions<IngredientsDbContext> options
     {
         modelBuilder.Entity<Ingredient>(builder =>
         {
-            builder.HasKey(i => i.Id);
+            builder.HasKey(i => i.IngredientId);
             builder.OwnsOne(i => i.NutritionPer100G);
             builder.PrimitiveCollection(i => i.Allergens);
         });

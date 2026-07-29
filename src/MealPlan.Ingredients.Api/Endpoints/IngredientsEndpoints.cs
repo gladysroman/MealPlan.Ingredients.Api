@@ -25,7 +25,7 @@ public static class IngredientsEndpoints
         {
             var ingredient = await service.AddIngredientAsync(request, cancellationToken);
 
-            return Results.Created($"/ingredients/{ingredient.Id}", ToDto(ingredient));
+            return Results.Created($"/ingredients/{ingredient.IngredientId}", ToDto(ingredient));
         });
 
         ingredients.MapPut("/{id}", async (string id, UpdateIngredientRequest request, IngredientsService service, CancellationToken cancellationToken) =>
@@ -48,7 +48,7 @@ public static class IngredientsEndpoints
     }
 
     private static IngredientDto ToDto(Ingredient ingredient) => new(
-        ingredient.Id,
+        ingredient.IngredientId,
         ingredient.Name,
         ingredient.Category,
         ingredient.Allergens,

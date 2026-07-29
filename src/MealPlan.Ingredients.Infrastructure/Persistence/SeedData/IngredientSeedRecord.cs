@@ -4,8 +4,8 @@ namespace MealPlan.Ingredients.Infrastructure.Persistence.SeedData;
 
 internal sealed class IngredientSeedRecord
 {
-    [JsonPropertyName("id")]
-    public string Id { get; init; } = string.Empty;
+    [JsonPropertyName("ingredient_id")]
+    public string IngredientId { get; init; } = string.Empty;
 
     [JsonPropertyName("name")]
     public string Name { get; init; } = string.Empty;

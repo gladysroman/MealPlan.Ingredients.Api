@@ -1,6 +1,6 @@
 [
   {
-    "id": "ing_001",
+    "ingredient_id": "ing_001",
     "name": "Chicken",
     "category": "protein",
     "allergens": [],
@@ -14,7 +14,7 @@
     "updated_date": "2026-06-01"
   },
   {
-    "id": "ing_002",
+    "ingredient_id": "ing_002",
     "name": "Salmon",
     "category": "protein",
     "allergens": ["fish"],
@@ -28,7 +28,7 @@
     "updated_date": "2026-01-01"
   },
   {
-    "id": "ing_003",
+    "ingredient_id": "ing_003",
     "name": "Large Egg",
     "category": "protein",
     "allergens": ["egg"],
@@ -42,7 +42,7 @@
     "updated_date": "2026-01-02"
   },
   {
-    "id": "ing_004",
+    "ingredient_id": "ing_004",
     "name": "Tofu",
     "category": "protein",
     "allergens": ["soy"],
@@ -56,7 +56,7 @@
     "updated_date": "2026-03-15"
   },
   {
-    "id": "ing_005",
+    "ingredient_id": "ing_005",
     "name": "Whole Milk",
     "category": "dairy",
     "allergens": ["milk"],
@@ -70,7 +70,7 @@
     "updated_date": "2026-01-03"
   },
   {
-    "id": "ing_006",
+    "ingredient_id": "ing_006",
     "name": "Cheddar Cheese",
     "category": "dairy",
     "allergens": ["milk"],
@@ -84,7 +84,7 @@
     "updated_date": "2026-01-03"
   },
   {
-    "id": "ing_007",
+    "ingredient_id": "ing_007",
     "name": "Greek Yogurt",
     "category": "dairy",
     "allergens": ["milk"],
@@ -98,7 +98,7 @@
     "updated_date": "2026-05-20"
   },
   {
-    "id": "ing_008",
+    "ingredient_id": "ing_008",
     "name": "Broccoli",
     "category": "vegetable",
     "allergens": [],
@@ -112,7 +112,7 @@
     "updated_date": "2026-01-04"
   },
   {
-    "id": "ing_009",
+    "ingredient_id": "ing_009",
     "name": "Spinach",
     "category": "vegetable",
     "allergens": [],
@@ -126,7 +126,7 @@
     "updated_date": "2026-01-05"
   },
   {
-    "id": "ing_010",
+    "ingredient_id": "ing_010",
     "name": "Carrot",
     "category": "vegetable",
     "allergens": [],
@@ -140,7 +140,7 @@
     "updated_date": "2026-01-05"
   },
   {
-    "id": "ing_011",
+    "ingredient_id": "ing_011",
     "name": "Banana",
     "category": "fruit",
     "allergens": [],
@@ -154,7 +154,7 @@
     "updated_date": "2026-01-06"
   },
   {
-    "id": "ing_012",
+    "ingredient_id": "ing_012",
     "name": "Blueberries",
     "category": "fruit",
     "allergens": [],
@@ -168,7 +168,7 @@
     "updated_date": "2026-04-10"
   },
   {
-    "id": "ing_013",
+    "ingredient_id": "ing_013",
     "name": "Avocado",
     "category": "fruit",
     "allergens": [],
@@ -182,7 +182,7 @@
     "updated_date": "2026-01-07"
   },
   {
-    "id": "ing_014",
+    "ingredient_id": "ing_014",
     "name": "Brown Rice",
     "category": "grain",
     "allergens": [],
@@ -196,7 +196,7 @@
     "updated_date": "2026-01-07"
   },
   {
-    "id": "ing_015",
+    "ingredient_id": "ing_015",
     "name": "Rolled Oats",
     "category": "grain",
     "allergens": ["gluten"],
@@ -210,7 +210,7 @@
     "updated_date": "2026-01-08"
   },
   {
-    "id": "ing_016",
+    "ingredient_id": "ing_016",
     "name": "Whole Wheat Bread",
     "category": "grain",
     "allergens": ["gluten", "wheat"],
@@ -224,7 +224,7 @@
     "updated_date": "2026-02-18"
   },
   {
-    "id": "ing_017",
+    "ingredient_id": "ing_017",
     "name": "Almonds",
     "category": "nuts_and_seeds",
     "allergens": ["tree_nuts"],
@@ -238,7 +238,7 @@
     "updated_date": "2026-01-09"
   },
   {
-    "id": "ing_018",
+    "ingredient_id": "ing_018",
     "name": "Peanut Butter",
     "category": "nuts_and_seeds",
     "allergens": ["peanuts"],
@@ -252,7 +252,7 @@
     "updated_date": "2026-01-09"
   },
   {
-    "id": "ing_019",
+    "ingredient_id": "ing_019",
     "name": "Olive Oil",
     "category": "fat_and_oil",
     "allergens": [],
@@ -266,7 +266,7 @@
     "updated_date": "2026-01-10"
   },
   {
-    "id": "ing_020",
+    "ingredient_id": "ing_020",
     "name": "Garlic",
     "category": "spice",
     "allergens": [],
