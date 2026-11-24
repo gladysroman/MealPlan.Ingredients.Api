@@ -7,6 +7,7 @@ public static class IngredientsEndpoints
 {
     public static void MapIngredientsEndpoints(this WebApplication app)
     {
+        // Reading is open to everyone; creating, updating and deleting need a signed-in user.
         var ingredients = app.MapGroup("/ingredients");
 
         ingredients.MapGet("/", async (IngredientsService service, CancellationToken cancellationToken) =>
@@ -21,12 +22,13 @@ public static class IngredientsEndpoints
             return ingredient is null ? Results.NoContent() : Results.Ok(ToDto(ingredient));
         });
 
-        ingredients.MapPost("/create", async (CreateIngredientRequest request, IngredientsService service, CancellationToken cancellationToken) =>
+        ingredients.MapPost("/", async (CreateIngredientRequest request, IngredientsService service, CancellationToken cancellationToken) =>
         {
             var ingredient = await service.AddIngredientAsync(request, cancellationToken);
 
             return Results.Created($"/ingredients/{ingredient.IngredientId}", ToDto(ingredient));
-        });
+        })
+        .RequireAuthorization();
 
         ingredients.MapPut("/{id}", async (string id, UpdateIngredientRequest request, IngredientsService service, CancellationToken cancellationToken) =>
         {
@@ -35,7 +37,8 @@ public static class IngredientsEndpoints
             return ingredient is null
                 ? Results.NotFound($"Ingredient '{id}' was not found.")
                 : Results.Ok(ToDto(ingredient));
-        });
+        })
+        .RequireAuthorization();
 
         ingredients.MapDelete("/{id}", async (string id, IngredientsService service, CancellationToken cancellationToken) =>
         {
@@ -44,7 +47,8 @@ public static class IngredientsEndpoints
             return deleted
                 ? Results.NoContent()
                 : Results.NotFound($"Ingredient '{id}' was not found.");
-        });
+        })
+        .RequireAuthorization();
     }
 
     private static IngredientDto ToDto(Ingredient ingredient) => new(
