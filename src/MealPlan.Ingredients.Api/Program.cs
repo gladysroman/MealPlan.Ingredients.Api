@@ -1,3 +1,4 @@
+using MealPlan.Ingredients.Api.Auth;
 using MealPlan.Ingredients.Api.Endpoints;
 using MealPlan.Ingredients.Application.Ingredients;
 using MealPlan.Ingredients.Infrastructure;
@@ -6,6 +7,8 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSharedCookieAuthentication(builder.Configuration);
+builder.Services.AddValidation();
 builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure();
 builder.Services.AddRepositories();
@@ -21,6 +24,9 @@ if (app.Environment.IsDevelopment())
 }
 
 await app.Services.SeedInfrastructureDataAsync();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapIngredientsEndpoints();
 

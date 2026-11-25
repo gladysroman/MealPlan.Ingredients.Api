@@ -10,7 +10,8 @@ public class IngredientsService(IIngredientRepository repository)
     public Task<Ingredient?> GetIngredientByIdAsync(string id, CancellationToken cancellationToken) =>
         repository.GetByIdAsync(id, cancellationToken);
 
-    public async Task<Ingredient> AddIngredientAsync(CreateIngredientRequest request, CancellationToken cancellationToken) {
+    public async Task<Ingredient> AddIngredientAsync(CreateIngredientRequest request, CancellationToken cancellationToken)
+    {
         var date = DateTime.UtcNow;
         var ingredient = new Ingredient
         {
@@ -19,15 +20,16 @@ public class IngredientsService(IIngredientRepository repository)
             Category = request.Category,
             Allergens = request.Allergens,
             NutritionPer100G = new NutritionInfo
-        {
-            Calories = request.NutritionPer100G.Calories,
-            CarbsG = request.NutritionPer100G.CarbsG,
-            ProteinG = request.NutritionPer100G.ProteinG,
-            FatG = request.NutritionPer100G.FatG
-        },
-        CreatedDate = date,
-        UpdatedDate = date
-    };
+            {
+                Calories = request.NutritionPer100G.Calories,
+                CarbsG = request.NutritionPer100G.CarbsG,
+                ProteinG = request.NutritionPer100G.ProteinG,
+                FatG = request.NutritionPer100G.FatG
+            },
+            CreatedDate = date,
+            UpdatedDate = date
+        };
+
         return await repository.AddAsync(ingredient, cancellationToken);
     }
 
